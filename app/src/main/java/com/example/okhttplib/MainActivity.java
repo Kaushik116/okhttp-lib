@@ -1,4 +1,3 @@
-// MainActivity.java in the app module
 package com.example.okhttplib;
 
 import android.os.Bundle;
@@ -31,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        networkManager = new NetworkManager();
+
+        networkManager = NetworkManager.getInstance();
+
         textView = findViewById(R.id.textData);
         Button buttonGet = findViewById(R.id.btnGet);
         Button buttonPost = findViewById(R.id.btnPost);
@@ -49,8 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 post();
             }
         });
-
     }
+
 
     public void get() {
         networkManager.get(getURL, new Callback() {
