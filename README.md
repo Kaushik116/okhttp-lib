@@ -14,6 +14,6 @@
 
 '''gradle
 	dependencies {
-	        implementation 'com.github.Kaushik116:okhttp-demo-lib:Tag'
+	        implementation 'com.github.Kaushik116:okhttp-lib:Tag'
 	}
 '''
